@@ -11,7 +11,9 @@ class Owner(db.Model):#owner
     name = db.Column(db.String(20), nullable=False)
     cars = db.relationship('Car', backref="owner")
 
-# class Cover(db.Model):#cover
-#     id = db.Column(db.Integer, primary_key=True)
-#     details = db.Column(db.String(100), nullable=False)
-#     cover_id = db.Column(db.Integer, db.ForeignKey("cover.id"), nullable=False, unique=True)
+class Cover(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(20), nullable=False)
+    last_name = db.Column(db.String(20), nullable=False)
+    owner_id = db.Column(db.Integer, db.ForeignKey("owner.id"))
+    # cars = db.relationship('Car', backref="owner")

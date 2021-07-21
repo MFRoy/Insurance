@@ -1,3 +1,11 @@
+<head>
+<title>
+    Insurance
+</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <body>
     <h1>Insurance</h1>
     
@@ -6,12 +14,24 @@
     {% endblock title %}
     </h2>
 
-    <div class="navbar">
+    <!-- <div class="navbar">
         <a href="{{ url_for('home') }}">Home</a>
         <a href="{{ url_for('create') }}">Add a vehicle</a>
-        <a href="{{ url_for('create_owner') }}">Add an Owner</a>
-    </div>
-
+        <a href="{{ url_for('create_owner') }}">Add an Owner</a> -->
+    <!-- </div> -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Insurance</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('create') }}">Car</a></li>
+            <li><a href="{{ url_for('create_owner') }}">Owner</a></li>
+            <li><a href="{{ url_for('create_cover') }}">Cover</a></li>
+          </ul>
+        </div>
+      </nav>
     <br>
     
     {% block body %}

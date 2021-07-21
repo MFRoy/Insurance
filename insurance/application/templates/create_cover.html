@@ -1,8 +1,24 @@
 {% extends 'create.html' %}
 
-{% block form_contents %}
-    {{ form.details.cover }} {{ form.details }}
-    <br>
-    {{ form.cover.cover }} {{ form.cover }}
-{% endblock form_contents %}
-
+{% block body %}
+<html>
+    <head>
+        <title>Simple form</title>
+    </head>
+    <body>
+        <div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.first_name.label }} {{ form.first_name }}
+                <br>
+                {{ form.last_name.label }} {{ form.last_name }}
+                <br>
+                {{ form.owner.label }} {{ form.label }}
+                <br>
+                {{ form.submit }}
+            {{ message }}
+            </form>
+        </div>
+    </body>
+</html>
+{% endblock %}
