@@ -14,3 +14,9 @@ class OwnerForm(FlaskForm):
 # class CoverForm(FlaskForm):
 #     description = StringField("Add a Policy")
 #     submit = SubmitField("Submit")
+
+class CoverForm(FlaskForm):
+    first_name = StringField('Cover Type')
+    last_name = StringField('Annual Cost')
+    owner = SelectField("", choices=[])
+    submit = SubmitField("Submit")
