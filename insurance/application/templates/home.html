@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block body %}
+
+    {% for task in tasks %}
+        <div class = "task"> 
+            {{ task.id }} - {{ task.description }} - {{ "✔️" if task.completed else "❌" }}
+            <br>
+            {% if task.owner %}
+                {{ task.owner.name }}
+                <br>
+            {% endif %}
+        
+            <a href="{{ url_for('update', id=task.id) }}">Change Car info</a>
+            <a href="{{ url_for('delete', id=task.id) }}">Remove</a>
+            <br>
+    
+            {% if task.completed %}
+                <a href="{{ url_for('incomplete', id=task.id) }}">Change to Not-Covered</a>
+            {% else %}
+                <a href="{{ url_for('complete', id=task.id) }}">Change to Covered</a>
+            {% endif %}
+             
+            <br>
+            <br>
+        </div>
+    {% endfor %}
+
+{% endblock body %}
