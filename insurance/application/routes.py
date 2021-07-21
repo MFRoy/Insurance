@@ -109,11 +109,11 @@ def incomplete(id):
 @app.route("/create_cover", methods=["GET", "POST"])
 def create_cover():
     form = CoverForm()
-
     if request.method == "POST":
         new_task = Cover(
             first_name=form.first_name.data,
-            last_name=form.last_name.data
+            last_name=form.last_name.data,
+            owner_id = form.owner.data
             )
         db.session.add(new_task)
         db.session.commit()

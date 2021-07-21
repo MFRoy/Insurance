@@ -16,7 +16,7 @@ class OwnerForm(FlaskForm):
 #     submit = SubmitField("Submit")
 
 class CoverForm(FlaskForm):
-    first_name = StringField('First Name')
-    last_name = StringField('Last Name')
-    owner = SelectField("Select Owner", choices=[])
+    first_name = StringField('Cover Type')
+    last_name = StringField('Annual Cost')
+    owner = SelectField("", choices=[])
     submit = SubmitField("Submit")

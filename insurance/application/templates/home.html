@@ -13,11 +13,17 @@
             {% if task.owner %}
                 {{ task.owner.name }}
                 <br>
+                {% for cov in covs %}
+                {% if task.owner.id==cov.owner_id %}
+                    {{ cov.first_name }} {{ cov.last_name }}
+                <br>
+            {% endif %}  
+            {% endfor %}
             {% endif %}
-            {% for cov in covs %}
+            <!-- {% for cov in covs %}
                 {{ cov.first_name }} {{ cov.last_name }}
                 <br>
-            {% endfor %}
+            {% endfor %} -->
         
             <a href="{{ url_for('update', id=task.id) }}">Change Car info</a>
             <a href="{{ url_for('delete', id=task.id) }}">Remove</a>

@@ -10,6 +10,7 @@ class Owner(db.Model):#owner
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), nullable=False)
     cars = db.relationship('Car', backref="owner")
+    cover_relationship = db.relationship('Cover', backref="owner")
 
 class Cover(db.Model):
     id = db.Column(db.Integer, primary_key=True)
