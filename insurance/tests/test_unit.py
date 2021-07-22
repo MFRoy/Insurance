@@ -1,7 +1,7 @@
 from flask import url_for
 from flask_testing import TestCase
 from application import app, db
-from application.models import Owner, Car
+from application.models import Owner, Car, Cover
 
 class TestBase(TestCase):
     def create_app(self):
@@ -62,6 +62,15 @@ class TestCreate(TestBase):
         
         assert Owner.query.filter_by(name="Example owner").first() != None
 
+    def test_create_cover(self):
+        response = self.client.post(
+            url_for("create_cover"),
+            data={"first_name" : "Example cover","last_name" : "Example cost"},
+            follow_redirects=True
+            )
+        
+        assert Cover.query.filter_by(first_name="Example cover",last_name="Example cost").first() != None
+
 class TestUpdate(TestBase):
     def test_update(self):
         response = self.client.post(
@@ -100,3 +109,4 @@ class TestDelete(TestBase):
 
         assert "Do something else" in response.data.decode()
         assert "Run unit tests" not in response.data.decode()
+
