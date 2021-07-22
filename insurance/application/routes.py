@@ -88,24 +88,6 @@ def incomplete(id):
 
     return redirect(url_for("home"))
 
-
-# @app.route('/', methods=['GET', 'POST'])
-# @app.route('/home', methods=['GET', 'POST'])
-# def register():
-#     error = ""
-#     form = BasicForm()
-
-#     if request.method == 'POST':
-#         first_name = form.first_name.data
-#         last_name = form.last_name.data
-
-#         if len(first_name) == 0 or len(last_name) == 0:
-#             error = "Please supply both first and last name"
-#         else:
-#             return 'thank_you'
-
-#     return render_template('extra.html', form=form, message=error)
-
 @app.route("/create_cover", methods=["GET", "POST"])
 def create_cover():
     form = CoverForm()
