@@ -109,4 +109,3 @@ class TestDelete(TestBase):
 
         assert "Do something else" in response.data.decode()
         assert "Run unit tests" not in response.data.decode()
-
