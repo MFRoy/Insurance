@@ -54,7 +54,7 @@ I used a Trello board to try and keep track of my progress however i belive this
 
 ## Entity Relationship Diagram 
 
-Below you can see two of my early version ERDs the first of which was created before any building had begun
+Below you can see two of my early version ERDs the first of which was created before any building had begun.
 
 ![ERDv1](images/ERD_concept_v1.png)<br><br><br>
 ![ERDv2](images/ERD_concept_v2.png)
@@ -63,11 +63,11 @@ My final ERD looked like this
 
 ![ERD](images/ERD.png)
 
-As you can see i have introduced two one to many relationships so that the Owner can be insured on differnt cars with different Cover
+As you can see i have introduced two one to many relationships so that the Owner can be insured on differnt cars with different Cover.
 
 ## Testing
 
-For the tests i conducted unit tests and integration tests covering 96% of the application
+For the tests i conducted unit tests and integration tests covering 96% of the application.
 
 ### to run these tests yourself you can follow below:
 
