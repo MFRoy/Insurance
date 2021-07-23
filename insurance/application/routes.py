@@ -2,6 +2,7 @@ from . import app, db
 from .models import Owner, Car, Cover
 from .forms import CarForm, OwnerForm, CoverForm
 from flask import redirect, url_for, request, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 @app.route("/main")
 def home():
