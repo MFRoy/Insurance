@@ -42,6 +42,6 @@ I decided to create an insurance site where you could imput your car description
 
 ## Risk Assessment
 
-![Risk Assessment](C:\Users\MichaelRoy\OneDrive\Pictures\risk_assesment.png)
+![Risk Assessment](C:/Users/MichaelRoy/OneDrive/Pictures/risk_assesment.png)
 
 
