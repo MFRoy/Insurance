@@ -1,12 +1,12 @@
-Insurance
+# Insurance
 
-Introduction
+## Introduction
 
-The objective provided for this project is as follows:
+### The objective provided for this project is as follows:
 
 To create a CRUD application with utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training.
 
-Requirements:
+## Requirements:
 
 Functioning CRUD application created in Python
 Functioning front-end to website using Flask
@@ -17,26 +17,31 @@ Detailed risk assessment
 Automated tests
 Fully integrated into Github or other VCS
 
-Proposal
+## Proposal
 
 I decided to create an insurance site where you could imput your car description and personal information and view your insurance details.
 
-How CRUD plays a part is as follows:
+###  How CRUD plays a part is as follows:
 
-Create:
+### Create:
     Adding Owner information 
     Adding Car information
     Adding Insurance information
     
-Read:
+### Read:
     Able to view car,peronal and 
     insurance information on one page
 
-Update:
+### Update:
     Make changes to car details
     
 
-Delete:
+### Delete:
     Remove a Car from the insurance
+
+
+## Risk Assessment
+
+![Risk Assessment](./images/risk_assesment.png)
 
 
